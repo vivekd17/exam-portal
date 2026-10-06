@@ -20,7 +20,7 @@ export default function BulkAnswerKeyModal({
   examTitle = "Exam Paper",
   onApply,
   isSaving = false,
-  apiBase = "http://localhost:8000",
+  apiBase = import.meta.env.VITE_API_BASE || "http://localhost:8000",
   showToast = () => {}
 }) {
   const [activeTab, setActiveTab] = useState('paste'); // 'paste' | 'matrix'
